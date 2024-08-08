@@ -1,3 +1,5 @@
+console.log('Hello from the script 👋');
+// Parallax animation
 document.addEventListener('scroll', function () {
   const scrolltop = window.scrollY;
   const layers = document.querySelectorAll('.parallax-layer');
@@ -10,3 +12,18 @@ document.addEventListener('scroll', function () {
     layer.style.transform = translate3d;
   });
 });
+
+// Toggle dusk
+function toggleDusk() {
+  const parallaxContainer = document.getElementById('parallax-container');
+  console.log('Toggle dusk?');
+  parallaxContainer.style.display === 'none'
+    ? (parallaxContainer.style.display = 'block')
+    : (parallaxContainer.style.display = 'none');
+}
+
+// toggle hamburger
+function toggleMenu() {
+  const navbar = document.querySelector('.navbar ul');
+  navbar.classList.toggle('active');
+}
