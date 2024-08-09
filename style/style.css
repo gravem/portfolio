@@ -79,7 +79,17 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 601;
+  z-index: 101;
+}
+
+.header-flexcontainer1 {
+  display: block;
+}
+
+.header-flexcontainer2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .logo {
@@ -121,24 +131,29 @@ header {
   background: none;
   border: none;
   color: #fff7f2;
-  display: none;
   cursor: pointer;
+  z-index: 102;
+  font-size: 1.4rem;
 }
 
 @media (max-width: 768px) {
+  header {
+    padding: 0.4rem 1rem;
+  }
   .hamburger {
     display: block;
   }
   .navbar ul {
     position: absolute;
     top: 100%;
-    left: 70%;
+    left: 65%;
     display: none;
     flex-direction: column;
     width: 100%;
     background-color: #ff889c;
     border-radius: 20px;
     padding: 1rem 0.2rem;
+    box-shadow: 0px 2px 2px #13096e29;
   }
 
   .navbar ul.active {

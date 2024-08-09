@@ -26,33 +26,37 @@
   </head>
   <body>
     <header>
-      <h2 class="logo"><a href="#greeting-card">Åsmund</a></h2>
-      <nav class="navbar">
-        <ul>
-          <li class="item"><a href="#about">About</a></li>
-          <li class="item"><a href="#projects">Projects</a></li>
-          <li class="item"><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="toggle">
-        <i class="fa-solid fa-layer-group"></i>
-        <label class="switch">
-          <input
-            type="checkbox"
-            id="toggleDusk"
-            onclick="toggleDusk()"
-            checked
-          />
-          <span class="slider"></span>
-        </label>
-        <i class="fa-solid fa-mountain-sun"></i>
+      <div class="header-flexcontainer1">
+        <h2 class="logo"><a href="#greeting-card">Åsmund</a></h2>
       </div>
-      <button
-        class="hamburger"
-        onclick="toggleMenu()"
-      >
-        <i class="fa fa-bars"></i>
-      </button>
+      <div class="header-flexcontainer2">
+        <nav class="navbar">
+          <ul>
+            <li class="item"><a href="#about">About</a></li>
+            <li class="item"><a href="#projects">Projects</a></li>
+            <li class="item"><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="toggle">
+          <i class="fa-solid fa-layer-group"></i>
+          <label class="switch">
+            <input
+              type="checkbox"
+              id="toggleDusk"
+              onclick="toggleDusk()"
+              checked
+            />
+            <span class="slider"></span>
+          </label>
+          <i class="fa-solid fa-mountain-sun"></i>
+        </div>
+        <button
+          class="hamburger"
+          onclick="toggleMenu()"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
     </header>
     <div id="parallax-container">
       <div
@@ -180,7 +184,7 @@
         <div class="project-details">
           <h2>UI checklist app</h2>
           <p>
-            figma prototype of an app in progress. More than just a to-do list.
+            Figma prototype of an app in progress. More than just a to-do list.
             When complex tasks needs to be repeated and logged, you need a
             checklist. Friendly, approachable design lightens a boring task.
             <br />
