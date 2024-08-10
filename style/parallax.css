@@ -1,0 +1,149 @@
+/* Parallax element */
+
+#parallax-container {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(#ffdc95, #ff889c 30%, #0f1155);
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: auto;
+}
+
+.parallax-layer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1700px;
+  height: 164vh;
+  background-size: cover;
+}
+
+/* hills */
+.parallax-layer-8 {
+  background-image: url(../img/7-hills.png);
+  z-index: 1;
+  transform: translateZ(80px) translateX(-50%) scale(1);
+  top: 290px;
+}
+
+.parallax-layer-7 {
+  background-image: url(../img/6-hills.png);
+  z-index: 2;
+  transform: translateZ(-7px) translateX(-50%) scale(1);
+  top: 230px;
+}
+
+.parallax-layer-6 {
+  background-image: url(../img/5-hills.png);
+  z-index: 3;
+  transform: translateZ(-6px) translateX(-50%) scale(1);
+  top: 260px;
+}
+
+.parallax-layer-5 {
+  background-image: url(../img/4-hills.png);
+  z-index: 4;
+  transform: translateZ(-5px) translateX(-50%) scale(1);
+  top: 350px;
+}
+
+.parallax-layer-4 {
+  background-image: url(../img/3-hills.png);
+  z-index: 5;
+  transform: translateZ(-4px) translateX(-50%) scale(1);
+  top: 520px;
+}
+
+.parallax-layer-3 {
+  background-image: url(../img/2-treeline.png);
+  z-index: 6;
+  transform: translateZ(-3px) translateX(-50%) scale(1);
+  top: 420px;
+}
+
+.parallax-layer-2 {
+  background-image: url(../img/1-tree.png);
+  z-index: 7;
+  transform: translateZ(-2px) translateX(-50%) scale(1);
+  top: -55px;
+}
+
+@media (max-width: 1600px) {
+  .parallax-layer {
+    width: 1600px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .parallax-layer {
+    width: 1200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .parallax-layer {
+    width: 800px;
+  }
+
+  #parallax-container {
+    height: 155vh;
+    width: 800px;
+    position: relative;
+  }
+  /* trees */
+  .parallax-layer-2 {
+    top: 300px;
+    width: 800px;
+    transform: translateZ(-2px) translateX(-100%) scale(1);
+  }
+  /* treeline */
+  .parallax-layer-3 {
+    top: 500px;
+  }
+  /* hills from nearest to furthest*/
+  .parallax-layer-4 {
+    top: 530px;
+  }
+  .parallax-layer-5 {
+    top: 370px;
+  }
+}
+
+@media (max-width: 450px) {
+  .parallax-layer {
+    width: 450px;
+    height: 164vh;
+    background-size: cover;
+  }
+
+  #parallax-container {
+    height: 155vh;
+    width: 450px;
+    position: relative;
+  }
+  /* trees */
+  .parallax-layer-2 {
+    top: 350px;
+  }
+  /* treeline */
+  .parallax-layer-3 {
+    top: 500px;
+  }
+  /* hills from nearest to furthest*/
+  .parallax-layer-4 {
+    top: 470px;
+  }
+}
+
+/* moon */
+.parallax-layer-1 {
+  width: 90px;
+  height: 80px;
+  border-radius: 50%;
+  top: 15%;
+  left: 20%;
+  background: linear-gradient(#ffffffb5, #ffffff6c 80%);
+  z-index: 0;
+  transform: translateZ(-1px) translateX(-50%) scale(1);
+}

@@ -34,11 +34,11 @@
     />
     <meta
       name="msapplication-TileColor"
-      content="#ff889c"
+      content="#13096e"
     />
     <meta
       name="theme-color"
-      content="#ff889c"
+      content="#13096e"
     />
     <title>Åsmund Gravem</title>
     <link
@@ -48,44 +48,35 @@
     />
     <link
       rel="stylesheet"
-      href="style/reset.css"
-    />
-    <link
-      rel="stylesheet"
       href="style/style.css"
     />
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-    </style>
   </head>
   <body>
     <header>
-      <div class="header-flexcontainer1">
-        <h2 class="logo"><a href="#greeting-card">Åsmund</a></h2>
-      </div>
-      <div class="header-flexcontainer2">
-        <nav class="navbar">
+      <h2 class="header__logo"><a href="#greeting-card">Åsmund</a></h2>
+      <div class="header__container">
+        <nav>
           <ul>
             <li class="item"><a href="#about">About</a></li>
             <li class="item"><a href="#projects">Projects</a></li>
             <li class="item"><a href="#contact">Contact</a></li>
           </ul>
         </nav>
-        <div class="toggle">
+        <div class="header__toggle-container">
           <i class="fa-solid fa-layer-group"></i>
-          <label class="switch">
+          <label class="toggle-switch">
             <input
               type="checkbox"
               id="toggleDusk"
               onclick="toggleDusk()"
               checked
             />
-            <span class="slider"></span>
+            <span class="toggle-switch__slider"></span>
           </label>
           <i class="fa-solid fa-mountain-sun"></i>
         </div>
         <button
-          class="hamburger"
+          class="header__hamburger"
           onclick="toggleMenu()"
         >
           <i class="fa-solid fa-bars"></i>
@@ -137,10 +128,12 @@
         <img
           src="img/portrait.jpg"
           alt="A very happy and friendly web developer looking for some cool people to work with"
-          class="portrait"
+          class="greeting-card__portrait"
         />
-        <h2 class="hello">Hello, my name is</h2>
-        <h1 class="hello-main">Åsmund Gravem.</h1>
+        <div class="greeting-card__heading-container">
+          <h2>Hello, my name is</h2>
+          <h1>Åsmund Gravem.</h1>
+        </div>
         <p class="about">
           I'm a full-stack web developer with over 10 years of experience in
           digital communication and advocacy for international NGOs.

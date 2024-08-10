@@ -24,6 +24,6 @@ function toggleDusk() {
 
 // toggle hamburger
 function toggleMenu() {
-  const navbar = document.querySelector('.navbar ul');
+  const navbar = document.querySelector('nav ul');
   navbar.classList.toggle('active');
 }
