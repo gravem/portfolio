@@ -16,10 +16,7 @@ document.addEventListener('scroll', function () {
 // Toggle dusk
 function toggleDusk() {
   const parallaxContainer = document.getElementById('parallax-container');
-  console.log('Toggle dusk?');
-  parallaxContainer.style.display === 'none'
-    ? (parallaxContainer.style.display = 'block')
-    : (parallaxContainer.style.display = 'none');
+  parallaxContainer.classList.toggle('parallax-toggle');
 }
 
 // toggle hamburger

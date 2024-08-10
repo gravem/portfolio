@@ -13,8 +13,8 @@
 .toggle-switch {
   position: relative;
   display: inline;
-  width: 60px;
-  min-width: 60px;
+  width: 54px;
+  min-width: 54px;
   height: 30px;
 }
 
@@ -28,7 +28,7 @@
 
 /* toggle slider */
 .toggle-switch__slider {
-  min-width: 60px;
+  min-width: 54px;
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -41,26 +41,26 @@
   border-radius: 36px;
   box-shadow:
     0px -2px 0px #13096e33,
-    0px 2px 0px #fff7f2;
+    0px 2px 0px var(--whiteish);
 }
 
 .toggle-switch__slider::before {
   position: absolute;
   content: '';
-  height: 22px;
-  width: 22px;
+  height: 26px;
+  width: 26px;
   min-width: 22px;
-  left: 5px;
-  bottom: 4px;
-  background-color: #fff7f2;
+  left: 2px;
+  bottom: 2px;
+  background-color: var(--whiteish);
   -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 50%;
-  box-shadow: 0 1px 0 #fff7f266;
+  box-shadow: 0 0 2px #13096e33;
 }
 
 input:checked + .toggle-switch__slider {
-  background-color: #ff889c;
+  background-color: var(--pink);
 }
 
 input:focus + .toggle-switch__slider {
@@ -68,7 +68,13 @@ input:focus + .toggle-switch__slider {
 }
 
 input:checked + .toggle-switch__slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+}
+
+@media (max-width: 768px) {
+  .header__toggle-container {
+    min-width: 120px;
+  }
 }

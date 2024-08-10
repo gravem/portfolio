@@ -2,9 +2,19 @@
 @import 'header.css';
 @import 'toggle-switch.css';
 @import 'parallax.css';
+@import 'about.css';
+@import 'project.css';
 @import 'footer.css';
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+  --pink: #ff889c;
+  --background-color: #0f1155;
+  --yellow: #ffdc95;
+  --shadow: #13096e33;
+  --whiteish: #fff7f2;
+}
 
 html {
   scroll-behavior: smooth;
@@ -12,8 +22,8 @@ html {
 
 body,
 html {
-  background-color: #0f1155;
-  color: #fff7f2;
+  background-color: var(--background-color);
+  color: var(--whiteish);
   font-family: 'Inter', sans-serif;
   font-size: 1.2rem;
   min-height: 100vh;
@@ -43,7 +53,7 @@ p {
 
 a {
   text-decoration: none;
-  color: #ff889c;
+  color: var(--pink);
   font-weight: 500;
   cursor: pointer;
 }
@@ -61,155 +71,24 @@ section {
   margin-top: 2rem;
   margin-bottom: 5rem;
 }
-/* Small screens */
-
-@media (max-width: 768px) {
-  body {
-    font-size: 1rem;
-  }
-}
-
-/* About */
-
-.greeting-card {
-  outline: solid 4px transparent;
-  border-radius: 12px;
-  position: relative;
-  margin-top: 8rem;
-}
-
-.dusk-border {
-  width: auto;
-  border: 8px solid transparent;
-  border-image: linear-gradient(160deg, #ffdc95, #ff889c 30%, #0f1155 90%);
-  border-image-slice: 1;
-}
-
-.greeting-card h2 {
-  font-size: 1em;
-  line-height: 0.8rem;
-  margin-top: 5rem;
-  margin-bottom: 0;
-}
-
-.greeting-card h1 {
-  margin-top: 0.2 rem;
-  margin-bottom: 4rem;
-  font-weight: 900;
-  letter-spacing: -2px;
-}
-
-.greeting-card__portrait {
-  height: 200px;
-  border-radius: 50%;
-  position: absolute;
-  top: 2rem;
-  left: 66%;
-}
 
 section a > svg {
   display: inline;
-  fill: #ff889c;
+  fill: var(--pink);
   position: relative;
   top: 0.2rem;
   width: 24px;
 }
-
-/* Smaller screens */
-@media (max-width: 768px) {
-  .greeting-card {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .greeting-card__portrait {
-    width: 300px;
-    height: 300px;
-    position: static;
-    top: 0;
-    margin: auto;
-    align-items: center;
-  }
-
-  .greeting-card h2 {
-    margin-top: 3rem;
-  }
-}
-
-/* Projects */
-
-.projects {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.project {
-  border: 8px solid transparent;
-  border-image: linear-gradient(160deg, #ffdc95, #ff889c 30%, #0f1155 90%);
-  border-image-slice: 1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 2rem;
-}
-
-.project a {
-  margin: auto;
-}
-
-.project-thumbnail {
-  object-fit: contain;
-  width: auto;
-  min-width: 200px;
-  max-width: 320px;
-}
-
-.project-details {
-  min-width: 200px;
-  padding-right: 2rem;
-  flex: 1 1 200px;
-}
-
-@media (max-width: 768px) {
-  .project {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .project-details {
-    min-width: 200px;
-    padding: 1rem;
-  }
-
-  .project a {
-    margin: 2rem auto;
-  }
-
-  .project-thumbnail {
-    object-fit: contain;
-    min-width: 180px;
-    max-width: 280px;
-  }
-}
-
-.inline-tag {
-  font-weight: 400;
-  line-height: 2rem;
-  color: #0f1155;
-  border-radius: 15px;
-  padding: 0.1rem 0.5rem 0.1rem 0.5rem;
-}
-
-.tek {
-  background: #ffdc95;
-}
-
-.soft {
-  background: #ff889c;
-}
-
 .container {
   max-width: 800px;
   margin: auto;
   min-width: 300px;
+}
+
+/* Small screens */
+
+@media (max-width: 768px) {
+  body {
+    font-size: 0.9rem;
+  }
 }

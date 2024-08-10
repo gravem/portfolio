@@ -1,0 +1,59 @@
+/* About */
+
+.greeting-card {
+  outline: solid 4px transparent;
+  border-radius: 12px;
+  position: relative;
+  margin-top: 8rem;
+}
+
+.dusk-border {
+  width: auto;
+  border: 8px solid transparent;
+  border-image: linear-gradient(160deg, #ffdc95, #ff889c 30%, #0f1155 90%);
+  border-image-slice: 1;
+}
+
+.greeting-card h2 {
+  font-size: 1em;
+  line-height: 0.8rem;
+  margin-top: 5rem;
+  margin-bottom: 0;
+}
+
+.greeting-card h1 {
+  margin-top: 0.5rem;
+  margin-bottom: 4rem;
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 2rem;
+}
+
+.greeting-card__portrait {
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  top: 2rem;
+  left: 66%;
+}
+
+/* Smaller screens */
+@media (max-width: 768px) {
+  .greeting-card {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .greeting-card__portrait {
+    width: 300px;
+    height: 300px;
+    position: static;
+    top: 0;
+    margin: auto;
+    align-items: center;
+  }
+
+  .greeting-card h2 {
+    margin-top: 3rem;
+  }
+}

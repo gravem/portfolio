@@ -1,6 +1,5 @@
 /* Parallax element */
-
-#parallax-container {
+.parallax-container {
   height: 100vh;
   width: 100%;
   background: linear-gradient(#ffdc95, #ff889c 30%, #0f1155);
@@ -8,6 +7,12 @@
   overflow: hidden;
   display: block;
   margin: auto;
+}
+
+/* Triggers by script toggleDusk() */
+.parallax-toggle {
+  display: none;
+  height: 0;
 }
 
 .parallax-layer {
