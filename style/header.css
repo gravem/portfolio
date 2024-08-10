@@ -51,6 +51,7 @@ nav a.active {
 .header__logo {
   margin: 0;
   padding-right: 0.5rem;
+  flex-shrink: 1;
 }
 
 .header__logo > a {
@@ -62,7 +63,24 @@ nav a.active {
   text-shadow: 0px 2px 2px #13096e17;
 }
 
+.header__icon {
+  height: 1rem;
+  color: #fff7f2;
+}
+
+svg {
+  fill: #fff7f2cb;
+  height: 1.2rem;
+}
+
 /* Hamburger button */
+
+.header__hamburger--icon {
+  height: 1.4rem;
+  margin: auto;
+  fill: #fff7f2;
+  filter: drop-shadow(0px 2px 2px #13096e15);
+}
 
 .header__hamburger {
   display: none;
@@ -71,12 +89,11 @@ nav a.active {
   color: #fff7f2;
   cursor: pointer;
   z-index: 102;
-  font-size: 1.4rem;
-  text-shadow: 0px 2px 2px #13096e17;
   margin: 0 1rem;
   width: 42px;
   height: 42px;
   border-radius: 21px;
+  background-color: #ff889c2d;
 }
 
 .header__hamburger:hover {
@@ -87,6 +104,10 @@ nav a.active {
 @media (max-width: 768px) {
   header {
     padding: 0.4rem 1rem;
+  }
+
+  .header__container {
+    gap: 0;
   }
   .header__hamburger {
     display: block;
