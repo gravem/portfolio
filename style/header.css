@@ -93,6 +93,7 @@ svg {
   margin: 0 1rem;
   width: 42px;
   height: 42px;
+  min-width: 42px;
   border-radius: 21px;
   background-color: #ff889c2d;
 }
