@@ -97,7 +97,7 @@ svg {
   height: 42px;
   min-width: 42px;
   border-radius: 21px;
-  background-color: #ff889c2d;
+  /* background-color: #ff889c2d; */
 }
 
 .header__hamburger:active {
