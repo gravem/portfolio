@@ -72,13 +72,25 @@ section {
   margin-bottom: 5rem;
 }
 
-section a > svg {
+.greeting-card_link-icons {
+}
+
+.icon {
   display: inline;
-  fill: var(--pink);
   position: relative;
   top: 0.2rem;
   width: 24px;
 }
+
+.icon--pink {
+  fill: var(--pink);
+}
+
+.icon-about {
+  width: 2rem;
+  height: 2rem;
+}
+
 .container {
   max-width: 800px;
   margin: auto;
