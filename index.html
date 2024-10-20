@@ -1,321 +1,229 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="favicon/favicon-16x16.png"
-    />
-    <link
-      rel="manifest"
-      href="favicon/site.webmanifest"
-    />
-    <link
-      rel="mask-icon"
-      href="favicon/safari-pinned-tab.svg"
-      color="#"
-    />
-    <meta
-      name="msapplication-TileColor"
-      content="#13096e"
-    />
-    <meta
-      name="theme-color"
-      content="#13096e"
-    />
-    <title>Åsmund Gravem</title>
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="favicon/favicon.ico"
-    />
-    <link
-      rel="stylesheet"
-      href="style/style.css"
-    />
-  </head>
-  <body>
-    <header>
-      <h2 class="header__logo"><a href="#greeting-card">Åsmund</a></h2>
-      <div class="header__container">
-        <nav>
-          <ul>
-            <li class="item"><a href="#about">About</a></li>
-            <li class="item"><a href="#projects">Projects</a></li>
-            <li class="item"><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-        <div class="header__toggle-container">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 576 512"
-          >
-            <!-- Layers -->
-            <path
-              d="M264.5 5.2c14.9-6.9 32.1-6.9 47 0l218.6 101c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 149.8C37.4 145.8 32 137.3 32 128s5.4-17.9 13.9-21.8L264.5 5.2zM476.9 209.6l53.2 24.6c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 277.8C37.4 273.8 32 265.3 32 256s5.4-17.9 13.9-21.8l53.2-24.6 152 70.2c23.4 10.8 50.4 10.8 73.8 0l152-70.2zm-152 198.2l152-70.2 53.2 24.6c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 405.8C37.4 401.8 32 393.3 32 384s5.4-17.9 13.9-21.8l53.2-24.6 152 70.2c23.4 10.8 50.4 10.8 73.8 0z"
-            />
-          </svg>
-          <label class="toggle-switch">
-            <input
-              type="checkbox"
-              id="toggleDusk"
-              onclick="toggleDusk()"
-              checked
-            />
-            <span class="toggle-switch__slider"></span>
-          </label>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 640 512"
-          >
-            <!-- Mountains -->
-            <path
-              d="M560 160A80 80 0 1 0 560 0a80 80 0 1 0 0 160zM55.9 512l325.2 0 75 0 122.8 0c33.8 0 61.1-27.4 61.1-61.1c0-11.2-3.1-22.2-8.9-31.8l-132-216.3C495 196.1 487.8 192 480 192s-15 4.1-19.1 10.7l-48.2 79L286.8 81c-6.6-10.6-18.3-17-30.8-17s-24.1 6.4-30.8 17L8.6 426.4C3 435.3 0 445.6 0 456.1C0 487 25 512 55.9 512z"
-            />
-          </svg>
-        </div>
-        <button
-          class="header__hamburger"
-          onclick="toggleMenu()"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 448 512"
-            class="header__hamburger--icon"
-          >
-            <!-- Bars hamburger menu button -->
-            <path
-              d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
-            />
-          </svg>
-        </button>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+  <link rel="manifest" href="favicon/site.webmanifest" />
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#" />
+  <meta name="msapplication-TileColor" content="#13096e" />
+  <meta name="theme-color" content="#13096e" />
+  <title>Åsmund Gravem</title>
+  <link rel="icon" type="image/x-icon" href="favicon/favicon.ico" />
+  <link rel="stylesheet" href="style/style.css" />
+</head>
+
+<body>
+  <header>
+    <h2 class="header__logo"><a href="#greeting-card">Åsmund</a></h2>
+    <div class="header__container">
+      <nav>
+        <ul>
+          <li class="item"><a href="#about">About</a></li>
+          <li class="item"><a href="#projects">Projects</a></li>
+          <li class="item"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header__toggle-container">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+          <!-- Layers -->
+          <path
+            d="M264.5 5.2c14.9-6.9 32.1-6.9 47 0l218.6 101c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 149.8C37.4 145.8 32 137.3 32 128s5.4-17.9 13.9-21.8L264.5 5.2zM476.9 209.6l53.2 24.6c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 277.8C37.4 273.8 32 265.3 32 256s5.4-17.9 13.9-21.8l53.2-24.6 152 70.2c23.4 10.8 50.4 10.8 73.8 0l152-70.2zm-152 198.2l152-70.2 53.2 24.6c8.5 3.9 13.9 12.4 13.9 21.8s-5.4 17.9-13.9 21.8l-218.6 101c-14.9 6.9-32.1 6.9-47 0L45.9 405.8C37.4 401.8 32 393.3 32 384s5.4-17.9 13.9-21.8l53.2-24.6 152 70.2c23.4 10.8 50.4 10.8 73.8 0z" />
+        </svg>
+        <label class="toggle-switch">
+          <input type="checkbox" id="toggleDusk" onclick="toggleDusk()" checked />
+          <span class="toggle-switch__slider"></span>
+        </label>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+          <!-- Mountains -->
+          <path
+            d="M560 160A80 80 0 1 0 560 0a80 80 0 1 0 0 160zM55.9 512l325.2 0 75 0 122.8 0c33.8 0 61.1-27.4 61.1-61.1c0-11.2-3.1-22.2-8.9-31.8l-132-216.3C495 196.1 487.8 192 480 192s-15 4.1-19.1 10.7l-48.2 79L286.8 81c-6.6-10.6-18.3-17-30.8-17s-24.1 6.4-30.8 17L8.6 426.4C3 435.3 0 445.6 0 456.1C0 487 25 512 55.9 512z" />
+        </svg>
       </div>
-    </header>
-    <div
-      id="parallax-container"
-      class="parallax-container"
-    >
-      <div
-        class="parallax-layer parallax-layer-8"
-        data-depth="-0.8"
-      ></div>
-      <div
-        class="parallax-layer parallax-layer-7"
-        data-depth="-0.7"
-      ></div>
-      <div
-        class="parallax-layer parallax-layer-6"
-        data-depth="-0.6"
-      ></div>
-      <div
-        class="parallax-layer parallax-layer-5"
-        data-depth="-0.5"
-      ></div>
-      <div
-        class="parallax-layer parallax-layer-4"
-        data-depth="-0.4"
-      ></div>
-      <!-- treeline -->
-      <div
-        class="parallax-layer parallax-layer-3"
-        data-depth="-0.3"
-      ></div>
-      <!-- trees -->
-      <div
-        class="parallax-layer parallax-layer-2"
-        data-depth="0"
-      ></div>
-      <!-- moon -->
-      <div
-        class="parallax-layer parallax-layer-1"
-        data-depth="-0.8"
-      ></div>
+      <button class="header__hamburger" onclick="toggleMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="header__hamburger--icon">
+          <!-- Bars hamburger menu button -->
+          <path
+            d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z" />
+        </svg>
+      </button>
     </div>
-    <main class="container">
-      <section
-        class="greeting-card dusk-border"
-        id="greeting-card"
-      >
-        <img
-          src="img/portrait-dusk.webp"
-          alt="A very happy and friendly web developer looking for some cool people to work with"
-          class="greeting-card__portrait"
-        />
-        <div class="greeting-card__heading-container">
-          <h2>Hello, my name is</h2>
-          <h1>Åsmund Gravem.</h1>
-        </div>
-        <p class="about">
-          I'm a full-stack web developer with over 10 years of experience in
-          digital communication and advocacy for international NGOs.
-        </p>
+  </header>
+  <div id="parallax-container" class="parallax-container">
+    <div class="parallax-layer parallax-layer-8" data-depth="-0.8"></div>
+    <div class="parallax-layer parallax-layer-7" data-depth="-0.7"></div>
+    <div class="parallax-layer parallax-layer-6" data-depth="-0.6"></div>
+    <div class="parallax-layer parallax-layer-5" data-depth="-0.5"></div>
+    <div class="parallax-layer parallax-layer-4" data-depth="-0.4"></div>
+    <!-- treeline -->
+    <div class="parallax-layer parallax-layer-3" data-depth="-0.3"></div>
+    <!-- trees -->
+    <div class="parallax-layer parallax-layer-2" data-depth="0"></div>
+    <!-- moon -->
+    <div class="parallax-layer parallax-layer-1" data-depth="-0.8"></div>
+  </div>
+  <main class="container">
+    <section class="greeting-card dusk-border" id="greeting-card">
+      <img src="img/portrait-dusk.webp"
+        alt="A very happy and friendly web developer looking for some cool people to work with"
+        class="greeting-card__portrait" />
+      <div class="greeting-card__heading-container">
+        <h2>Hello, my name is</h2>
+        <h1>Åsmund Gravem.</h1>
+      </div>
+      <p class="about">
+        I'm a full-stack web developer with over 10 years of experience in
+        digital communication and advocacy for international NGOs.
+      </p>
+      <p>
+        I have a passion for creating engaging and impactful web solutions
+        that address diverse audience needs and support social causes.
+      </p>
+      <div class="greeting-card__link-icons">
+        <a href="https://github.com/gravem"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+            <!-- Github -->
+            <path
+              d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+          </svg></a>
+        &nbsp;
+        <a href="https://www.linkedin.com/in/gravem"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <!-- LinkedIn -->
+            <path
+              d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+          </svg></a>
+      </div>
+    </section>
+    <section id="about">
+      <h2>A little more about me</h2>
+      <hr />
+      <p>
+        Having spent over a decade as a digital advisor, marketer, designer
+        and generally the go to person for all things digital, I decided to
+        take the chance and pivot my career.
+      </p>
+      <p>
+        My background in visual communication and passion for creating
+        functional end effective content online is the perfect springboard for
+        a design and result driven developer.
+      </p>
+    </section>
+    <section class="projects" id="projects">
+      <h2>Projects</h2>
+      <hr />
+      <p>
+        Here is a selection of the most interesting projects I have been
+        working on.
+      </p>
+    </section>
+    <section class="project">
+      <div class="project__details">
+        <h2>OurNeighbourhood</h2>
         <p>
-          I have a passion for creating engaging and impactful web solutions
-          that address diverse audience needs and support social causes.
+          A proof of concept mobile web app to help and improve your
+          neighbourhood together with your friends and neighbours. Snap, tag
+          and collaborate. Designed, planned and built in 7 days.
         </p>
-        <div class="greeting-card__link-icons">
-          <a href="https://github.com/gravem"
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 496 512"
-            >
-              <!-- Github -->
-              <path
-                d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-              /></svg
-          ></a>
-          &nbsp;
-          <a href="https://www.linkedin.com/in/gravem"
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 448 512"
-            >
-              <!-- LinkedIn -->
-              <path
-                d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
-              /></svg
-          ></a>
-        </div>
-      </section>
-      <section id="about">
-        <h2>A little more about me</h2>
-        <hr />
-        <p>
-          Having spent over a decade as a digital advisor, marketer, designer
-          and generally the go to person for all things digital, I decided to
-          take the chance and pivot my career.
-        </p>
-        <p>
-          My background in visual communication and passion for creating
-          functional end effective content online is the perfect springboard for
-          a design and result driven developer.
-        </p>
-      </section>
-      <section
-        class="projects"
-        id="projects"
-      >
-        <h2>Projects</h2>
-        <hr />
-        <p>
-          Here is a selection of the most interesting projects I have been
-          working on.
-        </p>
-      </section>
-      <section class="project">
-        <div class="project__details">
-          <h2>OurNeighbourhood</h2>
-          <p>
-            A proof of concept mobile web app to help and improve your
-            neighbourhood together with your friends and neighbours. Snap, tag
-            and collaborate. Designed, planned and built in 7 days.
-          </p>
-          <h3>Key skills</h3>
-          <div class="project__details-skills">
-            <span class="inline-tag tek">Ruby on Rails</span>
-            <span class="inline-tag tek">JavaScript</span>
-            <span class="inline-tag tek">Stimulus</span>
-            <span class="inline-tag tek">Bootstrap</span>
-            <span class="inline-tag tek">Git</span>
-            <span class="inline-tag tek">Heroku</span>
-            <br />
-            <span class="inline-tag soft">Project lead</span>
-            <span class="inline-tag soft">Presentation</span>
-          </div>
-        </div>
-        <a href="https://myneighbourhood-65952015072e.herokuapp.com/">
-          <img
-            class="project__thumbnail"
-            c
-            src="img/OurNeighbourhood-phone.png"
-            alt="A mobile phone showing how OurNeighbourhood looks like on screen."
-          />
-        </a>
-      </section>
-      <section class="project">
-        <div class="project__details">
-          <h2>UI checklist app</h2>
-          <p>
-            Figma prototype of an app in progress. More than just a to-do list.
-            When complex tasks needs to be repeated and logged, you need a
-            checklist. Friendly, approachable design lightens a boring task.
-            <br />
-            <a
-              href="mailto:aasmund.gravem+portfolio-form@gmail.com?subject=Can%20I%20have%20a%20look%20at%20that%20Figma%20prototype%3F&body=Hi%20%C3%85smund!%0AI%20saw%20your%20portfolio%20and%20wanted%20to%20have%20a%20look%20at%20the%20Figma%20prototype.%20%0A%0ACheers!%0A%0APS.%20I'm%20looking%20for%20someone%20just%20like%20you%20to%20join%20our%20team.%20Let's%20chat!%0A%0APPS.%20Feel%20free%20to%20remove%20any%20of%20these."
-              >Let me know if you want to take a look at the Figma prototype.
-              (email link)</a
-            >
-          </p>
-          <h3>Key skills</h3>
-          <div class="project__details-skills">
-            <span class="inline-tag tek">Figma</span>
-            <span class="inline-tag tek">Ruby on Rails</span>
-          </div>
-        </div>
-        <a
-          href="mailto:aasmund.gravem+portfolio-form@gmail.com?subject=Can%20I%20have%20a%20look%20at%20that%20Figma%20prototype%3F&body=Hi%20%C3%85smund!%0AI%20saw%20your%20portfolio%20and%20wanted%20to%20have%20a%20look%20at%20the%20Figma%20prototype.%20%0A%0ACheers!%0A%0APS.%20I'm%20looking%20for%20someone%20just%20like%20you%20to%20join%20our%20team.%20Let's%20chat!%0A%0APPS.%20Feel%20free%20to%20remove%20any%20of%20these."
-        >
-          <img
-            class="project__thumbnail"
-            c
-            src="img/SimpleStep-phone.png"
-            alt="A mobile phone showing how SimpleStep looks like on screen."
-          />
-        </a>
-      </section>
-      <section id="contact">
-        <h2>Let's talk</h2>
-        <hr />
-        <p>You can reach me on the normal channels:</p>
-        <p class="contact-icons">
-          <a href="mailto:aasmund.gravem+portfolio-contact@gmail.com"
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512 512"
-            >
-              <!-- envelope -->
-              <path
-                d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
-              />
-            </svg>
-            aasmund.gravem@gmail.com</a
-          >
+        <h3>Key skills</h3>
+        <div class="project__details-skills">
+          <span class="inline-tag tek">Ruby on Rails</span>
+          <span class="inline-tag tek">JavaScript</span>
+          <span class="inline-tag tek">Stimulus</span>
+          <span class="inline-tag tek">Bootstrap</span>
+          <span class="inline-tag tek">Git</span>
+          <span class="inline-tag tek">Heroku</span>
           <br />
-          <a href="https://www.linkedin.com/in/gravem"
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 448 512"
-            >
-              <!-- LinkedIn -->
-              <path
-                d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
-              />
-            </svg>
-            Find me on linkedin</a
-          >
+          <span class="inline-tag soft">Project lead</span>
+          <span class="inline-tag soft">Presentation</span>
+        </div>
+      </div>
+      <a href="https://myneighbourhood-65952015072e.herokuapp.com/">
+        <img class="project__thumbnail" c src="img/OurNeighbourhood-phone.png"
+          alt="A mobile phone showing how OurNeighbourhood looks like on screen." />
+      </a>
+    </section>
+    <section class="project">
+      <div class="project__details">
+        <h2>UI checklist app</h2>
+        <p>
+          Figma prototype of an app in progress. More than just a to-do list.
+          When complex tasks needs to be repeated and logged, you need a
+          checklist. Friendly, approachable design lightens a boring task.
+          <br />
+          <a
+            href="mailto:aasmund.gravem+portfolio-form@gmail.com?subject=Can%20I%20have%20a%20look%20at%20that%20Figma%20prototype%3F&body=Hi%20%C3%85smund!%0AI%20saw%20your%20portfolio%20and%20wanted%20to%20have%20a%20look%20at%20the%20Figma%20prototype.%20%0A%0ACheers!%0A%0APS.%20I'm%20looking%20for%20someone%20just%20like%20you%20to%20join%20our%20team.%20Let's%20chat!%0A%0APPS.%20Feel%20free%20to%20remove%20any%20of%20these.">Let
+            me know if you want to take a look at the Figma prototype.
+            (email link)</a>
         </p>
-      </section>
-      <footer>
-        <p>Mandatory text at the bottom. ✔️<br />Thank you for popping by 👋</p>
-      </footer>
-    </main>
-    <script src="/script/script.js"></script>
-  </body>
+        <h3>Key skills</h3>
+        <div class="project__details-skills">
+          <span class="inline-tag tek">Figma</span>
+          <span class="inline-tag tek">Ruby on Rails</span>
+        </div>
+      </div>
+      <a
+        href="mailto:aasmund.gravem+portfolio-form@gmail.com?subject=Can%20I%20have%20a%20look%20at%20that%20Figma%20prototype%3F&body=Hi%20%C3%85smund!%0AI%20saw%20your%20portfolio%20and%20wanted%20to%20have%20a%20look%20at%20the%20Figma%20prototype.%20%0A%0ACheers!%0A%0APS.%20I'm%20looking%20for%20someone%20just%20like%20you%20to%20join%20our%20team.%20Let's%20chat!%0A%0APPS.%20Feel%20free%20to%20remove%20any%20of%20these.">
+        <img class="project__thumbnail" c src="img/SimpleStep-phone.png"
+          alt="A mobile phone showing how SimpleStep looks like on screen." />
+      </a>
+    </section>
+    <section class="project">
+      <div class="project__details">
+        <h2>Monster finder</h2>
+        <p>
+          A single page application that helps players quickly find monsters for when
+          they are needed while playing or preparing their game.
+        <ul>
+          <li>
+            Utilises a list of scraped monsters to pre-load a fuzzy-search list to prevent unnecessary API-calls.</li>
+          <li>
+            Search filters are stored as cookies between sessions as to make the user experience better.</li>
+        </ul>
+        <br />
+        <a href="https://dnd-monster-lookup.vercel.app/">Go find
+          a monster!</a>
+        </p>
+        <h3>Key skills</h3>
+        <div class="project__details-skills">
+          <span class="inline-tag tek">JavaScript</span>
+          <span class="inline-tag tek">API</span>
+          <span class="inline-tag tek">CSS</span>
+          <span class="inline-tag tek">Git</span>
+        </div>
+      </div>
+      <a href="https://dnd-monster-lookup.vercel.app/">
+        <img class="project__thumbnail" c src="img/monster-finder-aboleth.png"
+          alt="A mobile phone showing how the Monster-finder looks like on screen." />
+      </a>
+    </section>
+    <section id="contact">
+      <h2>Let's talk</h2>
+      <hr />
+      <p>You can reach me on the normal channels:</p>
+      <p class="contact-icons">
+        <a href="mailto:aasmund.gravem+portfolio-contact@gmail.com"><svg xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512">
+            <!-- envelope -->
+            <path
+              d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z" />
+          </svg>
+          aasmund.gravem@gmail.com</a>
+        <br />
+        <a href="https://www.linkedin.com/in/gravem"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <!-- LinkedIn -->
+            <path
+              d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+          </svg>
+          Find me on linkedin</a>
+      </p>
+    </section>
+    <footer>
+      <p>Mandatory text at the bottom. ✔️<br />Thank you for popping by 👋</p>
+    </footer>
+  </main>
+  <script src="/script/script.js"></script>
+</body>
+
 </html>
